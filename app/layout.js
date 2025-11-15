@@ -13,9 +13,8 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Rishik Portfolio - PrebuiltUI",
-  description:
-    "Rishik  is a frontend web developer based in London, UK. I am a self-taught developer with 10 years of experience in multiple companies like Microsoft, Tesla and Apple.",
+  title: "Rishik Portfolio",
+  description: "Rishik is a Software Engineer based in India.",
 };
 
 export default function RootLayout({ children }) {

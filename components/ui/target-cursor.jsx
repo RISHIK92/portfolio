@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useMemo } from "react";
+import { useEffect, useRef, useCallback, useMemo, useState } from "react";
 import { gsap } from "gsap";
 
 const TargetCursor = ({
@@ -22,7 +22,13 @@ const TargetCursor = ({
   const activeStrengthRef = useRef(0);
   const isInsideContainerRef = useRef(false);
 
-  const isMobile = useMemo(() => {
+  // Track if component is mounted (client-side)
+  const [isMounted, setIsMounted] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+
     const hasTouchScreen =
       "ontouchstart" in window || navigator.maxTouchPoints > 0;
     const isSmallScreen = window.innerWidth <= 768;
@@ -30,7 +36,7 @@ const TargetCursor = ({
     const mobileRegex =
       /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i;
     const isMobileUserAgent = mobileRegex.test(userAgent.toLowerCase());
-    return (hasTouchScreen && isSmallScreen) || isMobileUserAgent;
+    setIsMobile((hasTouchScreen && isSmallScreen) || isMobileUserAgent);
   }, []);
 
   const constants = useMemo(
@@ -52,7 +58,7 @@ const TargetCursor = ({
   }, []);
 
   useEffect(() => {
-    if (isMobile || !cursorRef.current) return;
+    if (!isMounted || isMobile || !cursorRef.current) return;
 
     const originalCursor = document.body.style.cursor;
     const container = document.querySelector(parentSelector);
@@ -347,6 +353,7 @@ const TargetCursor = ({
       isInsideContainerRef.current = false;
     };
   }, [
+    isMounted,
     targetSelector,
     parentSelector,
     spinDuration,
@@ -359,7 +366,7 @@ const TargetCursor = ({
   ]);
 
   useEffect(() => {
-    if (isMobile || !cursorRef.current || !spinTl.current) return;
+    if (!isMounted || isMobile || !cursorRef.current || !spinTl.current) return;
     if (spinTl.current.isActive()) {
       spinTl.current.kill();
       spinTl.current = gsap.timeline({ repeat: -1 }).to(cursorRef.current, {
@@ -368,9 +375,9 @@ const TargetCursor = ({
         ease: "none",
       });
     }
-  }, [spinDuration, isMobile]);
+  }, [spinDuration, isMounted, isMobile]);
 
-  if (isMobile) {
+  if (!isMounted || isMobile) {
     return null;
   }
 
