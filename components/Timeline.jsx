@@ -166,7 +166,7 @@ export function TimelineDemo() {
       content: (
         <div>
           <h3 className="text-sm font-semibold dark:text-white">
-            Intermediate – Web Technologies & Engineering Foundations
+            Intermediate - Class 11 & 12
           </h3>
 
           <p className="mt-2 text-xs md:text-sm text-neutral-800 dark:text-neutral-300">
