@@ -1,3 +1,5 @@
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { Outfit, Ovo } from "next/font/google";
 import "./globals.css";
 
@@ -20,6 +22,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Analytics />
+      <SpeedInsights />
       <body className="font-Outfit leading-8 dark:bg-darkTheme dark:text-white">
         {children}
       </body>
