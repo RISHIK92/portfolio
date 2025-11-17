@@ -11,7 +11,7 @@ export default function Footer() {
             className="w-5 hidden dark:block"
           />
 
-          <a href="rishik3555@gmail.com">rishik3555@gmail.com</a>
+          <a href="mailto:rishik3555@gmail.com">rishik3555@gmail.com</a>
         </div>
       </div>
       <div className="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-3">
