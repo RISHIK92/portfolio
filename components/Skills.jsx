@@ -38,7 +38,7 @@ const skillLogos = {
   Websockets:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg",
   WebRTC:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/chrome/chrome-original.svg",
+    "https://tse1.mm.bing.net/th/id/OIP.ONo_Ptnt6J5wAWNBoh_tNwHaHk?rs=1&pid=ImgDetMain&o=7&rm=3",
   "AWS Services":
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
   Firebase:
@@ -227,13 +227,17 @@ function SkillCard({ skill, className }) {
         )}
       </div>
 
-      {/* Desktop View: Hover to show logo */}
+      {/* Desktop View: Show logo by default, text on hover */}
       <div className="hidden md:block">
-        {isHovered && logoUrl ? (
+        {isHovered ? (
+          <span className="text-lg font-medium dark:text-white text-center transition-all duration-300">
+            {skill}
+          </span>
+        ) : logoUrl ? (
           <img
             src={logoUrl}
             alt={`${skill} logo`}
-            className="w-7 h-7 object-contain transition-all duration-300"
+            className="w-10 h-10 object-contain transition-all duration-300"
             style={{
               filter:
                 skill === "Express" || skill === "Next.js"
