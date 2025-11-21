@@ -206,21 +206,47 @@ function SkillCard({ skill, className }) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {isHovered && logoUrl ? (
-        <img
-          src={logoUrl}
-          alt={`${skill} logo`}
-          className="w-7 h-7 object-contain transition-all duration-300"
-          style={{
-            filter:
-              skill === "Express" || skill === "Next.js" ? "invert(1)" : "none",
-          }}
-        />
-      ) : (
-        <span className="text-lg font-medium dark:text-white text-center transition-all duration-300">
-          {skill}
-        </span>
-      )}
+      {/* Mobile View: Always show logo if available */}
+      <div className="md:hidden">
+        {logoUrl ? (
+          <img
+            src={logoUrl}
+            alt={`${skill} logo`}
+            className="w-9 h-9 object-contain"
+            style={{
+              filter:
+                skill === "Express" || skill === "Next.js"
+                  ? "invert(1)"
+                  : "none",
+            }}
+          />
+        ) : (
+          <span className="text-sm font-medium dark:text-white text-center">
+            {skill}
+          </span>
+        )}
+      </div>
+
+      {/* Desktop View: Hover to show logo */}
+      <div className="hidden md:block">
+        {isHovered && logoUrl ? (
+          <img
+            src={logoUrl}
+            alt={`${skill} logo`}
+            className="w-7 h-7 object-contain transition-all duration-300"
+            style={{
+              filter:
+                skill === "Express" || skill === "Next.js"
+                  ? "invert(1)"
+                  : "none",
+            }}
+          />
+        ) : (
+          <span className="text-lg font-medium dark:text-white text-center transition-all duration-300">
+            {skill}
+          </span>
+        )}
+      </div>
     </div>
   );
 }
