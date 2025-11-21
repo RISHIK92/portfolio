@@ -72,9 +72,9 @@ export default function Skills() {
         />
       </div>
 
-      <div className="flex flex-col lg:flex-row gap-8 mb-8 mx-12">
+      <div className="flex flex-col lg:flex-row gap-8 mb-8 mx-4 lg:mx-12">
         <div className="flex-1 mb-12">
-          <div className="grid grid-cols-4 gap-6 mr-6">
+          <div className="grid grid-cols-4 gap-3 lg:gap-6 lg:mr-6">
             <SkillCard
               skill="JavaScript"
               className="border-2 border-red-300 cursor-target"
@@ -111,7 +111,7 @@ export default function Skills() {
         </div>
 
         <div className="flex-1">
-          <div className="grid grid-cols-4 gap-6 ml-6">
+          <div className="grid grid-cols-4 gap-2 lg:gap-6 lg:ml-6">
             <SkillCard
               skill="Node"
               className="border-2 border-blue-300 cursor-target"
@@ -149,7 +149,7 @@ export default function Skills() {
       </div>
 
       <div className="w-full ml-2">
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 lg:gap-6 max-w-4xl mx-auto">
           <SkillCard
             skill="Websockets"
             className="border-2 border-green-300 cursor-target"
@@ -202,7 +202,7 @@ function SkillCard({ skill, className }) {
 
   return (
     <div
-      className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-5 flex items-center justify-center hover:scale-105 transform transition-all duration-300 cursor-pointer ${className}`}
+      className={`bg-white dark:bg-gray-800 rounded-lg shadow-md p-3 md:p-5 flex items-center justify-center hover:scale-105 transform transition-all duration-300 cursor-pointer ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

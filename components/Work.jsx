@@ -114,15 +114,15 @@ function ProjectCard({ project }) {
   return (
     <div
       className="
-        relative overflow-visible
+        relative overflow-hidden md:overflow-visible
         border rounded-2xl shadow-lg bg-white dark:bg-neutral-900
-        p-10 h-[300px] md:h-[380px]
-        flex flex-col justify-between
+        p-6 md:p-10 h-auto md:h-[380px]
+        flex flex-col justify-between gap-8 md:gap-0
       "
     >
-      <div className="relative z-10 w-[58%] space-y-3">
+      <div className="relative z-10 w-full md:w-[58%] space-y-3">
         <div>
-          <h3 className="text-3xl font-semibold tracking-tight dark:text-white">
+          <h3 className="text-2xl md:text-3xl font-semibold tracking-tight dark:text-white">
             {project.name}
           </h3>
           <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
@@ -194,20 +194,20 @@ function ProjectCard({ project }) {
       </div>
 
       <div
-        className="relative z-10 flex flex-row items-center w-[45%]"
+        className="relative z-10 flex flex-row items-center w-full md:w-[45%]"
         suppressHydrationWarning
       >
         <AnimatedTooltip items={project.techStack} />
       </div>
 
-      <div className="absolute bottom-0 right-0 w-[60%] h-full flex items-end justify-end pointer-events-none">
-        <div className="pointer-events-auto">
+      <div className="relative md:absolute bottom-0 right-0 w-full md:w-[60%] h-[250px] md:h-full flex items-center md:items-end justify-center md:justify-end pointer-events-none mt-4 md:mt-0">
+        <div className="pointer-events-auto w-full h-full flex justify-center md:w-auto md:h-auto md:block">
           <PinContainer
             title={project.name}
             href={project.demo}
-            containerClassName="h-full"
+            containerClassName="h-full w-full flex justify-center md:justify-end"
           >
-            <div className="w-[550px] h-[300px]">
+            <div className="w-[300px] md:w-[550px] h-full md:h-[300px] flex items-center justify-center md:block">
               <img
                 src={project.image}
                 alt={project.name}
