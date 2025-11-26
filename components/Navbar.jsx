@@ -61,7 +61,7 @@ export default function Navbar() {
 
       <nav
         ref={navRef}
-        className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50"
+        className="w-full fixed px-5 z-[1000] lg:px-8 xl:px-[8%] py-4 flex items-center justify-between"
       >
         <a href="#top" className="text-2xl font-bold">
           <h1 className="font-ovo text-4xl">Rishik</h1>
