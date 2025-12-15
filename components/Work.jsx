@@ -86,7 +86,7 @@ export default function Projects() {
           description:
             "Built a full-stack 'prompt-to-app' engine that converts natural language into deployable mobile apps using generative AI. Implemented Dockerized isolated builds, scalable multi-user architecture, and automated CI/CD pipelines.",
           image:
-            "https://media.licdn.com/dms/image/v2/D562DAQEArCDovqVORg/profile-treasury-image-shrink_800_800/B56ZhAQwBmHkAY-/0/1753424796557?e=1764741600&v=beta&t=kh3NdC8t1AswjKqfrKiwlP4nJc9jB04xFmucy3HYwDA",
+            "https://media.licdn.com/dms/image/v2/D4E2DAQEMj6BmHcaQsQ/profile-treasury-image-shrink_800_800/B4EZsiJ.L6KgAY-/0/1765804602573?e=1766412000&v=beta&t=lN_krgc1VRqpHucBIL3utSWOtje_K5usK6nJ82pEBtI",
           techStack: nativexSkills,
           github: "https://github.com/rishik92/nativex",
           demo: "https://nativex.rishik.codes/",
@@ -100,7 +100,7 @@ export default function Projects() {
           description:
             "Built a real-time collaborative platform with code editor, drawing board, chat, and voice integration. Engineered low-latency WebSocket + WebRTC synchronization for smooth multi-user collaboration.",
           image:
-            "https://media.licdn.com/dms/image/v2/D562DAQFMFE-KP4GTLg/profile-treasury-image-shrink_800_800/B56ZZ9_uotGUAc-/0/1745870582839?e=1764741600&v=beta&t=A6f2B0x2pEXMA7yjDFcg-iCqONjEDY0zcBgJMOd3D8M",
+            "https://media.licdn.com/dms/image/v2/D562DAQFMFE-KP4GTLg/profile-treasury-image-shrink_800_800/B56ZZ9_uotGUAc-/0/1745870582839?e=1766412000&v=beta&t=u0r5assyha-1AI8xcsbr4PCn6U6r7wWsv--8tOoRg1Y",
           techStack: devSketchSkills,
           github: "https://github.com/risHIK92/dev-sketch",
           demo: "https://dev-sketch-frontend.vercel.app/",
@@ -220,3 +220,4 @@ function ProjectCard({ project }) {
     </div>
   );
 }
+
