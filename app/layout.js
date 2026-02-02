@@ -15,7 +15,7 @@ const ovo = Ovo({
 });
 
 export const metadata = {
-  title: "Rishik Portfolio",
+  title: "Rishik",
   description: "Rishik is a Software Engineer based in India.",
 };
 
