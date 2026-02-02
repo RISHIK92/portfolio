@@ -1,22 +1,27 @@
 import { MaskContainer } from "@/components/ui/svg-mask-effect";
 import { Cover } from "./ui/cover";
+import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="relative w-full h-screen">
+    <header className="relative w-full h-screen">
       <MaskContainer
         revealText={
           <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-            <img
+            <Image
               src="/assets/profile-img.jpeg"
-              alt=""
+              alt="Rishik Profile Picture"
+              width={128}
+              height={128}
               className="rounded-full w-32 invisible"
             />
             <h3 className="flex items-end gap-2 text-xl md:text-2xl text-white mb-3 font-Ovo invisible">
               Hlo! I&apos;m <Cover>Rishik</Cover>
-              <img
+              <Image
                 src="/assets/hand-icon.png"
-                alt=""
+                alt="Waving Hand"
+                width={24}
+                height={24}
                 className="w-6 mb-1 invisible"
               />
             </h3>
@@ -38,14 +43,22 @@ export default function Header() {
         className="absolute inset-0 w-full h-full"
       >
         <div className="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
-          <img
+          <Image
             src="/assets/profile-img.jpeg"
-            alt=""
+            alt="Rishik Profile Picture"
+            width={128}
+            height={128}
             className="rounded-full w-32 invisible"
           />
           <h3 className="flex items-end gap-2 text-xl md:text-2xl mb-3 text-white font-Ovo invisible">
             Hlo! I&apos;m <Cover>Rishik</Cover>
-            <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
+            <Image
+              src="/assets/hand-icon.png"
+              alt="Waving Hand"
+              width={24}
+              height={24}
+              className="w-6 mb-1"
+            />
           </h3>
 
           <h1 className="text-3xl text-white dark:text-slate-400 sm:text-6xl lg:text-[62px] mt-20 font-Ovo">
@@ -64,14 +77,22 @@ export default function Header() {
       </MaskContainer>
 
       <div className="absolute inset-0 w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 pointer-events-none">
-        <img
+        <Image
           src="/assets/profile-img.jpeg"
-          alt=""
+          alt="Rishik Profile Picture"
+          width={128}
+          height={128}
           className="rounded-full w-32 pointer-events-auto"
         />
         <h3 className="flex items-end gap-2 text-md md:text-2xl mb-3 font-Ovo pointer-events-auto">
           Hlo! I&apos;m <Cover>Rishik</Cover>
-          <img src="/assets/hand-icon.png" alt="" className="w-6 mb-1" />
+          <Image
+            src="/assets/hand-icon.png"
+            alt="Waving Hand"
+            width={24}
+            height={24}
+            className="w-6 mb-1"
+          />
         </h3>
 
         <div className="text-3xl sm:text-6xl lg:text-[66px] h-[200px]"></div>
@@ -88,14 +109,16 @@ export default function Header() {
             className="px-10 py-2.5 rounded-full border border-gray-300 dark:border-white/25 hover:bg-slate-100/70 dark:hover:bg-darkHover flex items-center gap-2 bg-white dark:bg-transparent dark:text-white"
           >
             my resume{" "}
-            <img
+            <Image
               src="/assets/download-icon.png"
-              alt=""
+              alt="Download"
+              width={16}
+              height={16}
               className="w-4 dark:invert"
             />
           </a>
         </div>
       </div>
-    </div>
+    </header>
   );
 }

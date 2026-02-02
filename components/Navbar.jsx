@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
+import Image from "next/image";
 export default function Navbar() {
   const sideMenuRef = useRef();
   const navRef = useRef();
@@ -22,7 +23,7 @@ export default function Navbar() {
           "backdrop-blur-lg",
           "shadow-sm",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:shadow-white/20",
         );
         navLinkRef.current.classList.remove(
           "bg-white",
@@ -30,7 +31,7 @@ export default function Navbar() {
           "bg-opacity-50",
           "dark:border",
           "dark:border-white/30",
-          "dark:bg-transparent"
+          "dark:bg-transparent",
         );
       } else {
         navRef.current.classList.remove(
@@ -39,7 +40,7 @@ export default function Navbar() {
           "backdrop-blur-lg",
           "shadow-sm",
           "dark:bg-darkTheme",
-          "dark:shadow-white/20"
+          "dark:shadow-white/20",
         );
         navLinkRef.current.classList.add(
           "bg-white",
@@ -47,7 +48,7 @@ export default function Navbar() {
           "bg-opacity-50",
           "dark:border",
           "dark:border-white/30",
-          "dark:bg-transparent"
+          "dark:bg-transparent",
         );
       }
     });
@@ -64,7 +65,7 @@ export default function Navbar() {
         className="w-full fixed px-5 z-[1000] lg:px-8 xl:px-[8%] py-4 flex items-center justify-between"
       >
         <a href="#top" className="text-2xl font-bold">
-          <h1 className="font-ovo text-4xl">Rishik</h1>
+          <span className="font-ovo text-4xl">Rishik</span>
         </a>
 
         <ul
@@ -112,27 +113,35 @@ export default function Navbar() {
             className="hidden lg:flex items-center gap-3 px-8 py-1.5 border border-gray-300 hover:bg-slate-100/70 dark:hover:bg-darkHover rounded-full ml-4 font-Ovo dark:border-white/30"
           >
             Contact
-            <img
+            <Image
               src="/assets/arrow-icon.png"
-              alt=""
+              alt="Arrow Icon"
+              width={12}
+              height={12}
               className="w-3 dark:hidden"
             />
-            <img
+            <Image
               src="/assets/arrow-icon-dark.png"
-              alt=""
+              alt="Arrow Icon"
+              width={12}
+              height={12}
               className="w-3 hidden dark:block"
             />
           </a>
 
           <button className="block md:hidden ml-3" onClick={openMenu}>
-            <img
+            <Image
               src="/assets/menu-black.png"
-              alt=""
+              alt="Menu Icon"
+              width={24}
+              height={24}
               className="w-6 dark:hidden"
             />
-            <img
+            <Image
               src="/assets/menu-white.png"
-              alt=""
+              alt="Menu Icon"
+              width={24}
+              height={24}
               className="w-6 hidden dark:block"
             />
           </button>
@@ -143,14 +152,18 @@ export default function Navbar() {
           className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-darkHover dark:text-white"
         >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
-            <img
+            <Image
               src="/assets/close-black.png"
-              alt=""
+              alt="Close Icon"
+              width={20}
+              height={20}
               className="w-5 cursor-pointer dark:hidden"
             />
-            <img
+            <Image
               src="/assets/close-white.png"
-              alt=""
+              alt="Close Icon"
+              width={20}
+              height={20}
               className="w-5 cursor-pointer hidden dark:block"
             />
           </div>

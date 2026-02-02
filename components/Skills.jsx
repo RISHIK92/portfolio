@@ -213,6 +213,9 @@ function SkillCard({ skill, className }) {
             src={logoUrl}
             alt={`${skill} logo`}
             className="w-9 h-9 object-contain"
+            loading="lazy"
+            width={36}
+            height={36}
             style={{
               filter:
                 skill === "Express" || skill === "Next.js"
@@ -238,6 +241,9 @@ function SkillCard({ skill, className }) {
             src={logoUrl}
             alt={`${skill} logo`}
             className="w-10 h-10 object-contain transition-all duration-300"
+            loading="lazy"
+            width={40}
+            height={40}
             style={{
               filter:
                 skill === "Express" || skill === "Next.js"

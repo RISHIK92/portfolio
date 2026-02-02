@@ -1,4 +1,5 @@
 import SplashCursor from "./SplashCursor";
+import Image from "next/image";
 
 export default function About() {
   const tools = [
@@ -24,16 +25,18 @@ export default function About() {
     },
   ];
   return (
-    <div id="about" className="w-full px-[12%] py-10 scroll-mt-20">
+    <section id="about" className="w-full px-[12%] py-10 scroll-mt-20">
       <SplashCursor />
       <h4 className="text-center mb-2 text-lg font-Ovo">Introduction</h4>
       <h2 className="text-center text-5xl font-Ovo">About me</h2>
 
       <div className="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
         <div className="max-w-max mx-auto relative">
-          <img
+          <Image
             src="/assets/profile-img.jpeg"
-            alt=""
+            alt="Rishik Profile Picture"
+            width={320}
+            height={320}
             className="w-64 sm:w-80 rounded-3xl max-w-none"
           />
 
@@ -87,10 +90,18 @@ export default function About() {
                 key={data.name}
                 className="border border-gray-300 dark:border-white/30 rounded-xl p-6 cursor-pointer hover:bg-lightHover hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:shadow-white/80 dark:hover:bg-darkHover/50"
               >
-                <img src={data.icon1} alt="" className="w-7 mt-3 dark:hidden" />
-                <img
+                <Image
+                  src={data.icon1}
+                  alt={data.name}
+                  width={28}
+                  height={28}
+                  className="w-7 mt-3 dark:hidden"
+                />
+                <Image
                   src={data.icon2}
-                  alt=""
+                  alt={data.name}
+                  width={28}
+                  height={28}
                   className="w-7 mt-3 hidden dark:block"
                 />
                 <h3 className="my-4 font-semibold text-gray-700 dark:text-white">
@@ -104,6 +115,6 @@ export default function About() {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

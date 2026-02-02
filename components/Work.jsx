@@ -19,6 +19,7 @@ import { BiNetworkChart } from "react-icons/bi";
 
 import { PinContainer } from "./ui/3d-pin";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const AnimatedTooltip = dynamic(
   () => import("./ui/animated-tooltip").then((mod) => mod.AnimatedTooltip),
@@ -205,11 +206,12 @@ function ProjectCard({ project }) {
             href={project.demo}
             containerClassName="h-full w-full flex justify-center md:justify-end"
           >
-            <div className="w-[300px] md:w-[550px] h-full md:h-[300px] flex items-center justify-center md:block">
-              <img
+            <div className="w-[300px] md:w-[550px] h-full md:h-[300px] flex items-center justify-center md:block relative">
+              <Image
                 src={project.image}
                 alt={project.name}
-                className="w-full h-full object-cover rounded-xl"
+                fill
+                className="object-cover rounded-xl"
               />
             </div>
           </PinContainer>

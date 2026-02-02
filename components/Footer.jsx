@@ -1,13 +1,22 @@
+import Image from "next/image";
 export default function Footer() {
   return (
-    <div className="mt-20">
+    <footer className="mt-20">
       <div className="text-center">
-        <h1 className="text-4xl">Rishik</h1>
+        <div className="text-4xl">Rishik</div>
         <div className="w-max flex items-center gap-2 mx-auto">
-          <img src="/assets/mail_icon.png" alt="" className="w-5 dark:hidden" />
-          <img
+          <Image
+            src="/assets/mail_icon.png"
+            alt="Email Icon"
+            width={20}
+            height={20}
+            className="w-5 dark:hidden"
+          />
+          <Image
             src="/assets/mail_icon_dark.png"
-            alt=""
+            alt="Email Icon"
+            width={20}
+            height={20}
             className="w-5 hidden dark:block"
           />
 
@@ -36,6 +45,6 @@ export default function Footer() {
           </li>
         </ul>
       </div>
-    </div>
+    </footer>
   );
 }

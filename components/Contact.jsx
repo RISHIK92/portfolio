@@ -1,12 +1,13 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Contact() {
   const [result, setResult] = useState("");
   const onSubmit = async (event) => {
     event.preventDefault();
     const hCaptcha = event.target.querySelector(
-      "textarea[name=h-captcha-response]"
+      "textarea[name=h-captcha-response]",
     ).value;
     if (!hCaptcha) {
       event.preventDefault();
@@ -125,7 +126,13 @@ export default function Contact() {
           className="py-2 px-8 w-max flex items-center justify-between gap-2 bg-black/80 text-white rounded-full mx-auto hover:bg-black duration-500 dark:bg-transparent dark:border dark:border-white/30 dark:hover:bg-darkHover"
         >
           Submit now
-          <img src="/assets/right-arrow-white.png" alt="" className="w-4" />
+          <Image
+            src="/assets/right-arrow-white.png"
+            alt="Submit Arrow"
+            width={16}
+            height={16}
+            className="w-4"
+          />
         </button>
         <p className="mt-4">{result}</p>
       </form>
