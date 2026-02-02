@@ -25,7 +25,7 @@ const AnimatedTooltip = dynamic(
   {
     ssr: false,
     loading: () => null,
-  }
+  },
 );
 
 const nativexSkills = [
@@ -85,8 +85,7 @@ export default function Projects() {
           date: "July 2025",
           description:
             "Built a full-stack 'prompt-to-app' engine that converts natural language into deployable mobile apps using generative AI. Implemented Dockerized isolated builds, scalable multi-user architecture, and automated CI/CD pipelines.",
-          image:
-            "https://media.licdn.com/dms/image/v2/D562DAQEArCDovqVORg/profile-treasury-image-shrink_800_800/B56ZhAQwBmHkAY-/0/1753424796557?e=1764741600&v=beta&t=kh3NdC8t1AswjKqfrKiwlP4nJc9jB04xFmucy3HYwDA",
+          image: "/assets/nativex.png",
           techStack: nativexSkills,
           github: "https://github.com/rishik92/nativex",
           demo: "https://nativex.rishik.codes/",
@@ -99,8 +98,7 @@ export default function Projects() {
           date: "February 2025",
           description:
             "Built a real-time collaborative platform with code editor, drawing board, chat, and voice integration. Engineered low-latency WebSocket + WebRTC synchronization for smooth multi-user collaboration.",
-          image:
-            "https://media.licdn.com/dms/image/v2/D562DAQFMFE-KP4GTLg/profile-treasury-image-shrink_800_800/B56ZZ9_uotGUAc-/0/1745870582839?e=1764741600&v=beta&t=A6f2B0x2pEXMA7yjDFcg-iCqONjEDY0zcBgJMOd3D8M",
+          image: "/assets/dev-sketch.png",
           techStack: devSketchSkills,
           github: "https://github.com/risHIK92/dev-sketch",
           demo: "https://dev-sketch-frontend.vercel.app/",
@@ -115,7 +113,7 @@ function ProjectCard({ project }) {
     <div
       className="
         relative overflow-hidden md:overflow-visible
-        border rounded-2xl shadow-lg bg-white dark:bg-neutral-900
+        border rounded-xl shadow-lg bg-white
         p-6 md:p-10 h-auto md:h-[380px]
         flex flex-col justify-between gap-8 md:gap-0
       "
