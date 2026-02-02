@@ -46,17 +46,17 @@ export function TimelineDemo() {
             </li>
 
             <li>
-              💎 <strong>Gehspo</strong> —{" "}
+              🏡 <strong>Lakeview Homes</strong> —{" "}
               <a
-                href="https://gehspo.vercel.app/"
+                href="https://lakeviewhomes.co.in/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline"
               >
-                gehspo.vercel.app
+                lakeviewhomes.co.in
               </a>
-              <br />A professional website communicating GHESPO’s dedication to
-              EHS excellence, education, and sustainable industry standards.
+              <br />A professional website communicating Lakeview Homes’s
+              dedication to quality living and community.
             </li>
           </ul>
 
@@ -70,8 +70,8 @@ export function TimelineDemo() {
             />
 
             <img
-              src="/assets/gehspo1.png"
-              alt="Gehspo website"
+              src="/assets/lakeview.png"
+              alt="Lakeview Homes website"
               width={500}
               height={500}
               className="h-20 w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,42,53,0.06),_0_1px_1px_rgba(0,0,0,0.05),_0_0_0_1px_rgba(34,42,53,0.04),_0_0_4px_rgba(34,42,53,0.08),_0_16px_68px_rgba(47,48,55,0.05),_0_1px_0_rgba(255,255,255,0.1)_inset] md:h-44 lg:h-60"
